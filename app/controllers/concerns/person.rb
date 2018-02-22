@@ -4,21 +4,26 @@ class Person
   def initialize(name, age)
     @name = name
     @age = age
+    @nickname = name.to_s[0, 4]
   end
 
   def nickname
     # YOUR IMPLEMENTATION HERE
-    'delete_me'
+    @nickname
   end
 
   def birth_year
     # YOUR IMPLEMENTATION HERE
-    1990
+    Time.now.year - @age.to_i
   end
 
   def introduction
     # YOUR IMPLEMENTATION HERE
-    'delete_me'
+    if age == 1
+      "Hello, my name is #{@name} and I am #{@year} year old"
+    else
+      "Hello my name is #{@name} and I am #{@year} years old"
+    end
   end
 
 end
