@@ -17,7 +17,7 @@ class PagesController < ApplicationController
     @person = Person.new params[:name], params[:age]
   end
 
-  def static
+  def me
   end
 
 end
